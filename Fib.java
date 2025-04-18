@@ -1,6 +1,6 @@
 public class Fib {
-    private int previous;
-    private int current;
+    private long previous;
+    private long current;
 
     public Fib(int i) {
         CalcFib(i);
@@ -14,18 +14,18 @@ public class Fib {
         previous = 1;
         while (i > 1) {
             i--;
-            int temp = current;
+            long temp = current;
             current += previous;
             previous = temp;
         }
     }
 
-    public int getCurrent() {
+    public long getCurrent() {
         return current;
     }
 
     @Override
     public String toString() {
-        return Integer.toString(current);
+        return Long.toString(current);
     }
 }
